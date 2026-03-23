@@ -35,5 +35,25 @@ utilities.hash = (str) => {
     }
 };
 
+// create random string
+utilities.createRandomString = (strLength) => {
+    let length = strLength;
+    length = typeof strLength === 'number' && strLength > 0 ? strLength : false;
+
+    if (length) {
+        let possiblecharacters = 'abcdefghijklmnopqrstuvwxyz1234567890';
+        let output = '';
+        for (let i = 1; i < length; i++) {
+            const randomCharacter = possiblecharacters.charAt(
+                Math.floor(Math.random() * possiblecharacters.length)
+            );
+            output += randomCharacter;
+        }
+        return output;
+    } else {
+        return false;
+    }
+};
+
 // start the server
 module.exports = utilities;

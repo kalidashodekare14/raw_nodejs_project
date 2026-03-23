@@ -13,12 +13,14 @@ environments.staging = {
     port: 3000,
     evnName: 'staging',
     secretKey: 'dfkjfdskfjdfijsdlkfjkjdf',
+    maxChecks: 5,
 };
 
 environments.production = {
     port: 5000,
     evnName: 'production',
     secretKey: 'sdfrer54ererfdfererer',
+    maxChecks: 5,
 };
 
 // determine watch environment was passed
